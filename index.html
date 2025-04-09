@@ -9,6 +9,8 @@
     <!-- HTML NÃO TEM PESCOÇO! -->
     <body>
         <header>
+            <h2>Menu do Portfólio</h2>
+            <p>Clique nas opções para ser direcionado a área do seu interesse:</p>
             <ul>
                 <li><a href="#sobreMim">Sobre mim</a></li>
                 <li><a href="#formacaoAcademica">Formação acadêmica</a></li>
@@ -16,6 +18,7 @@
                 <li><a href="#softSkills">Soft skills</a></li>
                 <li><a href="#meusProjetos">Meus projetos</a></li>
                 <li><a href="#meusArtigos">Meus artigos</a></li>
+                <li><a href="#contatos">Contatos</a></li>
                 <li><a href="#rodape">Rodapé</a></li>
             </ul>
         </header>
@@ -33,14 +36,29 @@
 
         <section id="formacaoAcademica">
             <h2>Formação acadêmica</h2>
-            <ul>
-                <li>Cursando o Ensino Médio com Itinerário de Formação Técnica e Profissional em Desenvolvimento de Sistemas</li>
-                <ol>
-                    <li>Curso de Educação Financeira, na Fundação Bradesco - 2025 </li>
-                    <li>Curso de Empreendedorismo, pelo SEBRAE - 2024 </li>
-                    <li>Curso do Básico de HTML - 2025 </li>
-                </ol>
-            </ul>
+
+            <table border="1" width="100%">
+                <tr>
+                    <th> Curso</th>
+                    <th>Instituição</th>
+                    <th>Ano</th>
+                </tr>
+                <tr>
+                    <td>Ensino Médio com Itinerário de Formação Técnica e Profissional em Desenvolvimento de Sistemas</td>
+                    <td>SENAI-SP</td>
+                    <td>Em andamento</td>
+                </tr>
+                <tr>
+                    <td>Educação Financeira</td>
+                    <td>Fundação Bradesco</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>Empreendedorismo</td>
+                    <td>SEBRAE</td>
+                    <td>2024</td>
+                </tr>
+            </table>
         </section>
 
         <section id="hardSkills">
@@ -51,6 +69,8 @@
                 <li>Lógica de Programação com JavaScript</li>
                 <li>HTML</li>
                 <li>CSS</li>
+                <li>Powershell Básico</li>
+                <li>Aprendizado em Git</li>
             </ul>
         </section>
 
@@ -60,6 +80,7 @@
             <li>Trabalhar em equipe</li>
             <li>Autoliderança</li>
             <li>Facilidade com Comunicação</li>
+            <li>Comprometimento</li>
         </ol>
         </section>
 
@@ -77,10 +98,20 @@
             <h2>Meus artigos</h2>
         </section>
 
+        <section id="contato">
+            <h2>Entre em contato comigo!</h2>
+            <form>
+                <input type="text" name="nome">
+                <input type="email" name="email">
+                <textarea type="text" name="mensagem" rows="5" cols="50"></textarea>
+                <input type="submit" name="botaoEnviar">
+            </form>
+        </section>
+
         <section id="rodape">
             <p>Links úteis</p>
             <a href="https://github.com/ferreiraduarda" title="Clique aqui para acessar meu GitHub" target="_blank"> Acesse o meu GitHub</a>
-            <p>Copyright</p>
+            <p> <b>Copyright</b></p>
             Desenvolvido por Maria Eduarda 💕
         </section>
 
