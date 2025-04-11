@@ -1,8 +1,76 @@
-/* CSS - Interno */
+/* CSS - Externo */
 body {
     font-family:'Times New Roman', 'Times', serif;
 }
+
 h1 {
-    font-size: 32px;
+    font-size: 2em; /* 1rem = 16px  1em = 'M'*/
     font-weight: bold;
+    color: #06344f;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #072639;
+}
+
+
+
+header {
+    background-color: #0077b6;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky; /* pode ser necessário top, left, bottom ou right */
+    top: 0;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+header a {
+    color: #ffffff;
+    font-weight: 700;
+    padding: .5rem 1rem;
+}
+
+header a:hover {
+    background-color: #023e8a;
+}
+
+section {
+    min-height: 80vh; /* vh -> viewport height (altura da viewport) */
+    margin: 2rem;
+    scroll-margin-top: 4rem;
+    padding: 1rem;
+    border: 1px solid #000;
+    /* border-radius: 10px; --> para bordas arredondadas */ 
+    /* overflow: hidden; */
+}
+
+section:hover {
+    background-color: #84b2efe9;
+}
+
+section ol {
+    list-style-type: lower-circle;
+}
+
+section ul {
+    list-style-type: square;
+}
+
+
+p {
+    margin-bottom: 1rem;
+}
+
+table th, td {
+    border: 1px solid;
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 10px;
 }
