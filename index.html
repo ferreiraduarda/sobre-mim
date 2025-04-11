@@ -5,27 +5,41 @@
          <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <title>Sobre mim</title>
+         <!--CSS - Externo (arquivo style)-->
+         <link rel="stylesheet" href="reset.css">
+         <link rel="stylesheet" href="style.css">
+         <style>
+            /*body {
+               background-color: aquamarine ;
+            }*/
+         </style>
     </head>
-    <!-- HTML NÃO TEM PESCOÇO! -->
-    <body>
+    <body style="background-color: rgb(71, 231, 178)" /*CSS Inline*/>
         <header>
             <h2>Menu do Portfólio</h2>
             <p>Clique nas opções para ser direcionado a área do seu interesse:</p>
-            <ul>
-                <li><a href="#sobreMim">Sobre mim</a></li>
-                <li><a href="#formacaoAcademica">Formação acadêmica</a></li>
-                <li><a href="#hardSkills">Hard skills</a></li>
-                <li><a href="#softSkills">Soft skills</a></li>
-                <li><a href="#meusProjetos">Meus projetos</a></li>
-                <li><a href="#meusArtigos">Meus artigos</a></li>
-                <li><a href="#contatos">Contatos</a></li>
-                <li><a href="#rodape">Rodapé</a></li>
-            </ul>
+            <nav>
+                <ul>
+                    <li><a href="#sobreMim">Sobre mim</a></li>
+                    <li><a href="#formacaoAcademica">Formação</a></li>
+                    <li><a href="#hardSkills">Hard skills</a></li>
+                    <li><a href="#softSkills">Soft skills</a></li>
+                    <li><a href="#meusProjetos">Projetos</a></li>
+                    <li><a href="#meusArtigos">Artigos</a></li>
+                    <li><a href="#contatos">Contatos</a></li>
+                    <li><a href="#rodape">Rodapé</a></li>
+                </ul>
+            </nav>
         </header>
 
         <section id="sobreMim">
         <h1>Sobre mim</h1>
-        <p>Sou estudante de Tecnologia da Informação do SENAI-SP.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi tenetur corporis alias dolor itaque unde! Nemo deserunt dolore corporis! Deleniti, corrupti iure mollitia nobis incidunt vitae alias labore, distinctio non laborum repudiandae et voluptate reiciendis doloremque quidem debitis eius ullam corporis repellendus molestiae! Inventore, consectetur? Optio tempora sint labore temporibus qui alias delectus iste beatae distinctio expedita velit, aspernatur ex.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit illum cum provident maxime delectus aliquid, id laudantium culpa veritatis magnam voluptates sed modi quisquam consectetur eum iure similique veniam. Laborum, reiciendis quaerat sint officia doloremque quis neque. Excepturi, error recusandae?</p>
+
+        <!--section>(h2>{Nova seção})+p*2>lorem20
+        header>nav>ul>li*10>a>{link$}-->
+
         <img src="duda.jpg" alt="Minha foto" width="200" title="Minha foto">
         <ul>
             <li>
@@ -104,16 +118,18 @@
                 <input type="text" name="nome">
                 <input type="email" name="email">
                 <textarea type="text" name="mensagem" rows="5" cols="50"></textarea>
-                <input type="submit" name="botaoEnviar">
+                <!--<input type="submit" name="botaoEnviar" value="Solicitar contato" -->
+                <button type="button" name="botaoEnviar"> Solicitar contato</button>
             </form>
         </section>
 
-        <section id="rodape">
+        <footer id="rodape">
             <p>Links úteis</p>
             <a href="https://github.com/ferreiraduarda" title="Clique aqui para acessar meu GitHub" target="_blank"> Acesse o meu GitHub</a>
             <p> <b>Copyright</b></p>
             Desenvolvido por Maria Eduarda 💕
-        </section>
+            <address>São Paulo, SP - Brasil</address>
+        </footer>
 
     </body>
 </html>
