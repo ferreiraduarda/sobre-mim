@@ -1,26 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); /* Arquivo CSS da fonte Ubunto */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); /* Arquivo CSS da fonte Ubuntu */
 
+:root{
+    --cor-primaria: #ef0010;
+    --cor-secundaria: #b02010;
+    --cor-botao: #b02010;
+    --cor-fundo-pagina: #fff;
+    --cor-fundo-cartao: #fff;
+    --cor-primaria-texto: #333;
+    --cor-secundaria-texto: #000000;
+    --cor-bordas: #aaa;
+    --borda-cartao: none;
+    --cor-hover-menu: #870909;
+    --cor-hover-card: #d63f2e;
+    --cor-header: #a10c0c;
+    --cor-header-texto: #000000;
+    --cor-titulo-cartao: #b02010;
+    
+}
+
+[data-theme="alto-contraste"] {
+    --cor-primaria: #ffffff;
+    --cor-secundaria: #000000;
+    --cor-fundo-pagina: #000000;
+    --cor-fundo-cartao: #000000;
+    --cor-primaria-texto: #333;
+    --cor-secundaria-texto: #ffffff;
+    --cor-bordas: #e1ff00;
+    --cor-hover-menu: #e1ff00;
+    --cor-hover-card: none;
+    --cor-botao: #c7f204;
+    --borda-cartao: 2px solid #e1ff00;
+    --cor-header: #ffffff;
+    --cor-header-texto: #000000;
+    --cor-titulo-cartao: #ffffff;
+}
 
 body {
     font-family:'Ubuntu', sans-serif;
+    background-color: var(--cor-fundo-pagina);
+    color: var(--cor-secundaria-texto);
 }
 
 h1 {
     font-size: 2em; /* 1rem = 16px  1em = 'M'*/
     font-weight: bold;
-    color: #06344f;
+    color: var(--cor-primaria);
 }
 
 h2 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #072639;
+    color: var(--cor-primaria);
 }
 
 
 header {
-    background-color: #4499c7;
-    padding: 1rem 2rem;
+    background-color: var(--cor-header);
+    padding: 1rem 2rem; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: sticky; /* pode ser necessário top, left, bottom ou right */
     top: 0;
@@ -33,13 +69,19 @@ header ul {
 }
 
 header a {
-    color: #ffffff;
+    color: var(--cor-header-texto);
     font-weight: 700;
     padding: .5rem 1rem;
 }
 
 header a:hover {
-    background-color: #023e8a;
+    background-color:var(--cor-hover-menu);
+    border: var(--borda-botao);
+}
+
+#botao-tema,
+#botao-contraste {
+    color: var(--cor-botao)
 }
 
 section {
@@ -52,9 +94,9 @@ section {
     /* overflow: hidden;*/
 }
 
-#meusProjetos .card:hover {
-    background-color: #45a4d7;
-}
+/* #meusProjetos .card:hover {
+    background-color: var(--cor-hover-card);
+} */
 
 #meusProjetos .card {
     width: 22%;
@@ -66,6 +108,64 @@ section {
 
 }
 
+.card-descricao {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--cor-primaria-texto);
+}
+
+.botao {
+    padding: 0.5rem 1rem;
+    border: none;
+    border: 4px;
+    margin: 0.3rem 0.3rem 0 0;
+    cursor: pointer;
+}
+
+.botao:hover {
+    cursor: pointer;
+    background-color: var(--cor-secundaria);
+}
+
+.botao-demo,
+.botao-continue,
+.botao-compartilhar {
+    background-color: var(--cor-bordas);
+    color: var(--cor-primaria-texto);
+}
+
+.botao-continue:hover {
+    background-color: var(--cor-primaria);
+}
+
+.botao-compartilhar:hover {
+    background-color: var(--cor-primaria);
+}
+
+.artigos header {
+    background-color: var(--cor-fundo-cartao);
+    box-shadow: none;
+}
+.artigos {
+    justify-content: space-evenly;
+}
+
+.artigos article {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 1rem;
+    border-left: 5px solid var(--cor-primaria);
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.artigos h3 {
+    margin-top: 0;
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
 /* section#formacaoAcademica,
 section#hardSkills {
     border: none;
@@ -75,15 +175,39 @@ section#hardSkills {
     text-align: center;
     margin-bottom: 2rem;
 }
-
-section ol {
+/* section ol {
     list-style-type: lower-circle;
 }
 
 section ul {
     list-style-type: square;
+} */
+ #sobreMim {
+    display: block;
+    padding: 4rem 10rem;
+ }
+#sobreMim img {
+    float: left;
+    margin: 0 2rem 1rem 0;
+    width: 30vw;
+    border-radius: 50%;
+    border: 5px solid var(--cor-bordas);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
+#sobreMim p {
+    text-align: justify;
+    margin-bottom: 1rem;
+    line-height: 1.6rem;
+}
+
+.minhas-redes {
+    clear: both;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.1rem;
+}
 
 p {
     margin-bottom: 1rem;
@@ -102,21 +226,30 @@ form {
     border: 1px solid #000;
     border-radius: 10px;
 } */
+
+footer{
+    background-color: var(--cor-fundo-cartao);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+    font-size: 1rem;
+}
+
 input[type="text"],
 input[type="email"],
 input,
 textarea {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: .25rem .75rem;
-    color: #333;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--cor-bordas);
+    border-radius: 6px;
     resize: none;
-
+    font-size: 1rem;
 }
 
 input[type="submit"] {
-    background-color: #0077b6;
-    color: #ffffff;
+    background-color: var(--cor-botao);
+    color: var(--cor-secundaria-texto);
     padding: .25rem .75rem;
     border: none;
 }
@@ -128,22 +261,24 @@ input[type="submit"] {
     padding: 2rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     list-style: none;
+    background-color: var(--cor-fundo-cartao);
+    border: var(--borda-cartao);
 }
 
 .titulo-card {
     font-weight: bold;
-    color: #0077b6;
+    color: var(--cor-titulo-cartao);
     font-size: 1.3rem;
 }
 
 .intituicao-card {
     font-size: 1.1rem;
-    color: #555;
+    color: var(--cor-primaria-texto);
 }
 
 .emoji-card {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 3rem;
 }
 
 .projeto-card{
@@ -163,7 +298,7 @@ input[type="submit"] {
     flex-wrap: wrap;
 }
 
-
-.projetos-card:link {
-    color: hotpink;
+.card-imagem img {
+    width: 100%;
+    border: 8px;
 }

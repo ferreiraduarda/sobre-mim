@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="alto-contraste">
     <head>
         <!-- Meta informações sobre a página -->
          <meta charset="UTF-8">
@@ -9,15 +9,10 @@
          <link rel="stylesheet" href="reset.css">
          <link rel="stylesheet" href="style.css">
          <style>
-            /*body {
-               background-color: aquamarine ;
-            }*/
          </style>
     </head>
     <body>
         <header>
-            <h2>Menu</h2>
-            <p>Clique nas opções para ser direcionado a área do seu interesse:</p>
             <nav>
                 <ul>
                     <li><a href="#sobreMim">Sobre mim</a></li>
@@ -28,27 +23,29 @@
                     <li><a href="#meusArtigos">Artigos</a></li>
                     <li><a href="#contatos">Contatos</a></li>
                     <li><a href="#rodape">Rodapé</a></li>
+                    <li><span id="botao-tema">🌑</span></li>
+                    <li><span id="botao-contraste">☀️</span></li>
                 </ul>
             </nav>
         </header>
 
-        <section id="sobreMim">
-        <h1>Sobre mim</h1>
+    <section id="sobreMim">
+        <h1 class="titulo-secao">Sobre mim</h1>
+
+        <img src="duda.jpg" alt="Minha foto" width="200" title="Menina com cabelo cacheado sorrindo">
+
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi tenetur corporis alias dolor itaque unde! Nemo deserunt dolore corporis! Deleniti, corrupti iure mollitia nobis incidunt vitae alias labore, distinctio non laborum repudiandae et voluptate reiciendis doloremque quidem debitis eius ullam corporis repellendus molestiae! Inventore, consectetur? Optio tempora sint labore temporibus qui alias delectus iste beatae distinctio expedita velit, aspernatur ex.</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit illum cum provident maxime delectus aliquid, id laudantium culpa veritatis magnam voluptates sed modi quisquam consectetur eum iure similique veniam. Laborum, reiciendis quaerat sint officia doloremque quis neque. Excepturi, error recusandae?</p>
-
         <!--section>(h2>{Nova seção})+p*2>lorem20
         header>nav>ul>li*10>a>{link$}-->
-
-        <img src="duda.jpg" alt="Minha foto" width="200" title="Minha foto">
-        <ul>
+        <ul class="minhas-redes">
             <li>
                 <a href="https://github.com/ferreiraduarda" title="Clique aqui para acessar meu portfólio no GitHub" target="_blank"> Acesse o meu GitHub</a>
             </li>
         </ul>
-        </section>
+    </section>
 
-        <section id="formacaoAcademica">
+    <section id="formacaoAcademica">
             <h2 class="titulo-secao">Formação acadêmica</h2>
 
             <div class="cards-em-coluna">
@@ -94,9 +91,9 @@
                 </tr>
             </table> -->
         </div>
-        </section>
+    </section>
 
-        <section id="hardSkills">
+    <section id="hardSkills">
             <h2 class="titulo-secao">Hard skills</h2>
 
             <div class="cards-em-linha">
@@ -137,9 +134,9 @@
                 <li class="descricao-card">Controle de versões em desenvolvimento colaborativo</li>
             </ul>
             </div>
-        </section>
+    </section>
 
-        <section id="softSkills">
+    <section id="softSkills">
             <h2 class="titulo-secao">Soft skills</h2>
 
             <div class="cards-em-linha">
@@ -169,14 +166,22 @@
                 <li class="titulo-card">Pensamento Crítico</li>
             </ul>
         </div>
-        </section>
+    </section>
 
-        <section id="meusProjetos">
+    <section id="meusProjetos">
             <h2 class="titulo-secao">Meus projetos</h2>
             <div class="cards-em-linha">
                 
             <ul class="card">
-                <li class="projeto-card"><a href="https://github.com/ferreiraduarda/lopal-moonlander" title="Clique aqui para acessar meu projeto - Jogo Moonlander" target="_blank"> Projeto Jogo "Moonlander"</a> </li>
+                <li class="card-imagem">
+                    <img src="jogo_moonlander.png" alt="Jogo Moon Lander">
+                </li>
+                <li class="titulo-card">Moon Lander</li>
+                <li class="card-descricao">Um jogo de simulação de pouso lunar</li>
+                <li class="card-cta">
+                    <button type="button" class="botao botao-demo">Jogue agora</button>
+                </li>
+                <li class="card-gh"><a href="https://github.com/ferreiraduarda/lopal-moonlander">GitHub</a></li>
             </ul>
             
             <ul class="card">
@@ -184,29 +189,60 @@
             </ul>
 
             <ul class="card">
-                <li class="projeto-card"><a href="https://github.com/ferreiraduarda/lopal-estruturas-repeticao" title="Clique aqui para acessar meus projetos sobre Estruturas de Repetição" target="_blank"> Estruturas de Repetição</a></li>
+                <li class="projeto-card"><a href="https://github.com/ferreiraduarda/lopal-estruturas-repeticao" title="Clique aqui para acessar meus projetos sobre Estruturas de Repetição" target="_blank">Estruturas de Repetição</a></li>
             </ul>
 
             <ul class="card">
-                <li class="projeto-card"><a href="https://github.com/ferreiraduarda/lopal-colecoes" title="Clique aqui para acessar meus projetos sobre Coleções" target="_blank"> Coleções</a></li>
+                <li class="projeto-card"><a href="https://github.com/ferreiraduarda/lopal-colecoes" title="Clique aqui para acessar meus projetos sobre Coleções" target="_blank">Coleções</a></li>
             </ul>
         </div>
-        </section>
+    </section>
 
-        <section id="meusArtigos">
-            <h2>Meus artigos</h2>
-        </section>
+    <section id="meusArtigos">
+            <h2 class="titulo-secao">Meus artigos</h2>
 
-        <section id="contato">
-            <h2>Entre em contato comigo!</h2>
+            <div class="artigos cards-em-linha">
+
+                <article class="card">
+                    <header>
+                        <h3 class="titulo-card">Portfólio profissional usando GitHub Pages</h3>
+                        <span class="data-publicacao">15 abr 2025,</span>
+                        <span class="autor"> por Maria Eduarda</span>
+                    </header>
+                    <p>Crie e publique seu portfólio profissional usando GitHub Pages, uma maneira fácil e gratuita de mostrar seus projetos e habilidades.</p>
+                    <footer>
+                        <button type="button" class="botao botao-continue">Continue lendo</button>
+                        <button type="button" class="botao botao-compartilhar">Compartilhar</button>
+                    </footer>
+                </article>
+
+                <article class="card">
+                    <header>
+                        <h3 class="titulo-card">Aprenda a criar um portfólio utilizando HTML e CSS.</h3>
+                        <span class="data-publicacao">23 abr 2025,</span>
+                        <span class="autor"> por Maria Eduarda</span>
+                    </header>
+                    <p>Crie e publique seu portfólio profissional utilizando HTML e CSS, uma maneira mais simples de apresentar seus projetos e criar sua identidade visual.</p>
+                    <footer>
+                        <button type="button" class="botao botao-continue">Continue lendo</button>
+                        <button type="button" class="botao botao-compartilhar">Compartilhar</button>
+                    </footer>
+                </article>
+
+            </div>
+
+    </section>
+
+    <section id="contato">
             <form>
+            <h2>Entre em contato comigo!</h2>
                 <input type="text" name="nome">
                 <input type="email" name="email">
                 <textarea type="text" name="mensagem" rows="5" cols="50"></textarea>
                 <input type="submit" name="botaoEnviar" value="Solicitar contato">
                  <!--<button type="button" name="botaoEnviar"> Solicitar contato</button>-->
             </form>
-        </section>
+    </section>
 
         <footer id="rodape">
             <p>Links úteis</p>
@@ -215,6 +251,31 @@
             Desenvolvido por Maria Eduarda 💕
             <address>São Paulo, SP - Brasil</address>
         </footer>
+        <script>
+            document.querySelector('#botao-tema').addEventListener('click', trocaTema);
+
+            function trocaTema(){
+                const root = document.documentElement;
+
+                if (root.getAttribute('data-theme') === 'dark') {
+                    root.removeAttribute('data-theme');
+                } else {
+                    root.setAttribute('data-theme', 'dark');
+                }
+            }
+
+            document.querySelector('#botao-contraste').addEventListener('click', trocaTemaContraste);
+
+            function trocaTemaContraste() {
+                const root = document.documentElement;
+
+                if (root.getAttribute('data-theme') === 'alto-contraste') {
+                    root.removeAttribute('data-theme');
+                } else {
+                    root.setAttribute('data-theme', 'alto-contraste');
+                }
+            }
+        </script>
 
     </body>
 </html>
