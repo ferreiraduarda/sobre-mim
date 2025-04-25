@@ -1,44 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); /* Arquivo CSS da fonte Ubuntu */
 
-:root{
-    --cor-primaria: #ef0010;
-    --cor-secundaria: #b02010;
-    --cor-botao: #b02010;
-    --cor-fundo-pagina: #fff;
-    --cor-fundo-cartao: #fff;
+:root {
+    --cor-primaria: #0077b6;
+    --cor-secundaria: #006194;
+    --cor-texto-botao: #f8f4f1;
+    --cor-fundo-pagina: linear-gradient(135deg, #fefefe 0%, #e3e3e3 100%);    
+    --cor-fundo-cartao: #f4faffaa;
     --cor-primaria-texto: #333;
-    --cor-secundaria-texto: #000000;
+    --cor-secundaria-texto: #555;
+    --cor-icones: #626786;
     --cor-bordas: #aaa;
     --borda-cartao: none;
-    --cor-hover-menu: #870909;
+    --borda-botao: 2px solid #0077b6;
     --cor-hover-card: #d63f2e;
-    --cor-header: #a10c0c;
-    --cor-header-texto: #000000;
-    --cor-titulo-cartao: #b02010;
-    
+}
+
+[data-theme="dark"] {
+    --cor-primaria: #0077b6;
+    --cor-secundaria: #006194;
+    --cor-texto-botao: #000000;
+    --cor-fundo-pagina: #222;
+    --cor-fundo-cartao: #333;
+    --cor-primaria-texto: #fff;
+    --cor-secundaria-texto: #ccc;
+    --cor-icones: #eee;
+    --cor-bordas: #aaa;
+    --borda-cartao: none;
+    --borda-botao: 2px solid #0077b6;
+    --cor-hover-card: none;
 }
 
 [data-theme="alto-contraste"] {
-    --cor-primaria: #ffffff;
-    --cor-secundaria: #000000;
-    --cor-fundo-pagina: #000000;
-    --cor-fundo-cartao: #000000;
-    --cor-primaria-texto: #333;
-    --cor-secundaria-texto: #ffffff;
-    --cor-bordas: #e1ff00;
-    --cor-hover-menu: #e1ff00;
+    --cor-primaria: #fff;
+    --cor-secundaria: #fff;
+    --cor-texto-botao: #ffffff;
+    --cor-fundo-pagina: #000;
+    --cor-fundo-cartao: #000;
+    --cor-primaria-texto: #fff;
+    --cor-secundaria-texto: #fff;
+    --cor-icones: #fff;
+    --cor-bordas: #ffff00;
+    --borda-cartao: 2px solid #ffff00;
+    --borda-botao: 2px solid #000;
     --cor-hover-card: none;
-    --cor-botao: #c7f204;
-    --borda-cartao: 2px solid #e1ff00;
-    --cor-header: #ffffff;
-    --cor-header-texto: #000000;
-    --cor-titulo-cartao: #ffffff;
 }
 
 body {
     font-family:'Ubuntu', sans-serif;
     background-color: var(--cor-fundo-pagina);
-    color: var(--cor-secundaria-texto);
+    color: var(--cor-primaria-texto);
 }
 
 h1 {
@@ -55,7 +65,7 @@ h2 {
 
 
 header {
-    background-color: var(--cor-header);
+    background-color: var(--cor-primaria);
     padding: 1rem 2rem; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: sticky; /* pode ser necessário top, left, bottom ou right */
@@ -69,14 +79,45 @@ header ul {
 }
 
 header a {
-    color: var(--cor-header-texto);
+    color: var(--cor-primaria-texto);
     font-weight: 700;
     padding: .5rem 1rem;
 }
 
 header a:hover {
-    background-color:var(--cor-hover-menu);
+    background-color:var(--cor-secundaria);
     border: var(--borda-botao);
+}
+
+[data-theme="alto-contraste"] header a {
+    color: #000;
+}
+
+[data-theme="alto-contraste"] header a:hover {
+    background-color: #ffff00;
+    color: #000;
+}
+
+[data-theme="alto-contraste"] footer {
+    color: #000;
+}
+
+[data-theme="alto-contraste"] .botao-continue:hover {
+    background-color: #ffff00;
+    color: #000;
+    border: 2px solid #000;
+}
+
+[data-theme="alto-contraste"] .botao-compartilhar:hover {
+    background-color: #ffff00;
+    color: #000;
+    border: 2px solid #000;
+}
+
+[data-theme="alto-contraste"] .botao {
+    background-color: #000;
+    color: #ccff00;
+    border: 2px solid #ffff00;
 }
 
 #botao-tema,
@@ -116,8 +157,7 @@ section {
 
 .botao {
     padding: 0.5rem 1rem;
-    border: none;
-    border: 4px;
+    border: 4px solid var(--cor-bordas); 
     margin: 0.3rem 0.3rem 0 0;
     cursor: pointer;
 }
@@ -130,8 +170,7 @@ section {
 .botao-demo,
 .botao-continue,
 .botao-compartilhar {
-    background-color: var(--cor-bordas);
-    color: var(--cor-primaria-texto);
+    background-color: var(--cor-texto-botao);
 }
 
 .botao-continue:hover {
@@ -139,7 +178,8 @@ section {
 }
 
 .botao-compartilhar:hover {
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-botao); 
 }
 
 .artigos header {
@@ -166,11 +206,6 @@ section {
     margin-bottom: 1rem;
 }
 
-/* section#formacaoAcademica,
-section#hardSkills {
-    border: none;
-} */
-
 .titulo-secao {
     text-align: center;
     margin-bottom: 2rem;
@@ -191,7 +226,7 @@ section ul {
     margin: 0 2rem 1rem 0;
     width: 30vw;
     border-radius: 50%;
-    border: 5px solid var(--cor-bordas);
+    border: 5px solid var(--cor-primaria);
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -218,6 +253,7 @@ form {
     flex-direction: column;
     gap: 1rem;
     max-width: 500px;
+    width: 100%;
 }
 
 /* table th, td {
@@ -228,7 +264,7 @@ form {
 } */
 
 footer{
-    background-color: var(--cor-fundo-cartao);
+    background-color: var(--cor-primaria);
     text-align: center;
     padding: 2rem 1rem;
     margin-top: 4rem;
@@ -244,14 +280,17 @@ textarea {
     border: 1px solid var(--cor-bordas);
     border-radius: 6px;
     resize: none;
+    color: var(--cor-primaria-texto);
     font-size: 1rem;
 }
 
 input[type="submit"] {
-    background-color: var(--cor-botao);
-    color: var(--cor-secundaria-texto);
-    padding: .25rem .75rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-botao);
+    padding: .5rem 1rem;
+    font-weight: 700;
     border: none;
+    margin: auto;
 }
 
 /* ESTILOS DOS CARDS */
@@ -300,5 +339,5 @@ input[type="submit"] {
 
 .card-imagem img {
     width: 100%;
-    border: 8px;
+    border: 8px solid var(--cor-bordas);
 }
