@@ -33,7 +33,7 @@
 [data-theme="alto-contraste"] {
     --cor-primaria: #fff;
     --cor-secundaria: #fff;
-    --cor-texto-botao: #ffffff;
+    --cor-texto-botao: #000000;
     --cor-fundo-pagina: #000;
     --cor-fundo-cartao: #000;
     --cor-primaria-texto: #fff;
